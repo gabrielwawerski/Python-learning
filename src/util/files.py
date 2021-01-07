@@ -1,16 +1,22 @@
-def read(file="example.txt"):
-    if file[len(file) - 4:5] == ".txt":
-        with open(file, "r") as file:
-            return file.read()
-    else:
-        with open(file + ".txt", "r") as file:
-            return file.read()
+def file(file_name):
+    with open(file_name) as _file:
+        pass
 
 
-def write(line, file="example.txt"):
-    if file[len(file) - 4:len(file)] == ".txt":
-        with open(file, "w+") as file:
-            return file.write(line)
+def read(fname="example.txt"):
+    if fname[len(fname) - 4:len(fname) - 1] == ".txt":
+        print(f"fname: {fname}")
+        with open(fname, "r") as fname:
+            return fname.read()
     else:
-        with open(file + ".txt", "w+") as file:
-            return file.write(line)
+        with open(fname + ".txt", "r") as fname:
+            return fname.read()
+
+
+def write(line, fname="example.txt"):
+    if fname[len(fname) - 4:len(fname) - 1] == ".txt":
+        with open(fname, "w+") as fname:
+            return fname.write(line)
+    else:
+        with open(fname + ".txt", "w+") as fname:
+            return fname.write(line)

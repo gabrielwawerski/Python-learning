@@ -31,12 +31,15 @@ def c_to_kelvin(value):
     pass
 
 
+from util import files
 # thanks to this, file is executable (i think) or usable/exportable as a module
 if __name__ == '__main__':
     gabe = "lul"
-    from scripts import board_calculator as board
+    from src.scripts import board_calculator as board
 
-    print(board.calc_board(input("outers per case: "), input("cases packed: ")))
+    #board.calc_print_user_board()
+    a_file = files.read("koszerny")
+    files.write("Ha! Nowa linia!\n" * 1, "koszerny")
     # print_hi('Gabe')
     # print(input("fuck: "))
     # x = get_input()
@@ -51,24 +54,13 @@ if __name__ == '__main__':
     #     print(_c_to_kelvin(int(user_input)))
 
 
-print(asd := "")
-
-
-def __add__(self, other):
-    pass
-
-
-# calc_board(12, 66)
-from util import files
-
-
 def menu():
     user_input = input("1. Write\n2.Read\nx. exit> ")
 
     # write to file
     if user_input == "1":
         print(get_input())
-        print(files.read("koszerny.txt"))
+        print(files.read("../koszerny.txt"))
     # read file
     elif user_input == "2":
         file_name = input("file name: ")
@@ -78,8 +70,6 @@ def menu():
         import sys
         sys.exit()
 
-
-files.write("Ha! Nowa linia!\n" * 10)
 # print(files.file_read("koszerny"))
 
 
