@@ -36,9 +36,9 @@ from util import files
 if __name__ == '__main__':
     gabe = "lul"
     from src.scripts import board_calculator as board
+    from util.files import *
 
-    #board.calc_print_user_board()
-    a_file = files.read("koszerny")
+    a_file = files.file("koszerny.txt", "asd")
     files.write("Ha! Nowa linia!\n" * 1, "koszerny")
     # print_hi('Gabe')
     # print(input("fuck: "))

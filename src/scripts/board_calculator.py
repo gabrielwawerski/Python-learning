@@ -7,14 +7,14 @@
 def calc_print_user_board():
     outers = int(input("Outers per case: "))
     cases = int(input("Cases: "))
-    print(f"Total outers: {_simple_calc_board(outers, cases)}")
+    print(f"Total outers: {simple_calc_board(outers, cases)}")
 
 
-def _simple_calc_board(outers, cases):
+def simple_calc_board(outers, cases):
     return outers * cases
 
 
-def _calc_board(outers, *cases):
+def calc_board(outers, *cases):
     total_cases = 0
     for case in cases:
         total_cases += case
